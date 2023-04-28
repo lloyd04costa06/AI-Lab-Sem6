@@ -6,7 +6,7 @@ GRAPH={
     1:[(4,9),(5,10)],
     2:[(6,8)],
     3:[(2,13),(7,13)],
-    4:[(7,8),(9,3)],
+    4:[(8,7),(9,3)],
     5:[(9,3)],
     6:[(5,10)],
     7:[(2,13),(6,8)],
@@ -58,8 +58,9 @@ def BestFS(start, goal):
     while queue:
         v = heapq.heappop(queue)
         if v[1] == goal:
-            print(" <-- GOAL")
+            print('-->',v[1]," <-- GOAL")
             break
+
         if v[1] not in visited:
             print("-->", v[1],end="")
             visited.add(v[1])
